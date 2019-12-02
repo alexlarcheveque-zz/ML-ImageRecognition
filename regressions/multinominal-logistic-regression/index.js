@@ -5,7 +5,7 @@ const plot = require("node-remote-plot");
 const _ = require("lodash");
 const mnist = require("mnist-data");
 
-const mnistData = mnist.training(0, 1000);
+const mnistData = mnist.training(0, 60000);
 const features = mnist.data.images.values(image => _.flatMap(image));
 
 const encodedLabels = mnistData.labels.values.map(label => {
